@@ -1,0 +1,38 @@
+{% load staticfiles %}
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<form action="/show/" method="POST">
+    {% csrf_token %}
+<table align="center">
+            <tr>
+                <th>
+                    <font face="Arial Black" color="red" size="8">
+                        Sathya Tech
+                    </font>
+                </th>
+            </tr>
+        </table>
+
+        <table align="center">
+            <tr>
+                <td>
+
+                <img src="{% static 'images/user.png' %}" width="200" height="200">
+
+                </td>
+                <td>
+                    <table align="center">
+    <tr><th>Login Page</th></tr>
+    <tr><td><input type="text" name="uname" placeholder="Username" required></td></tr>
+    <tr><td><input type="password" name="upass" placeholder="Password" required></td></tr>
+    <tr><th><input type="submit" value="Login"></th></tr>
+</table>
+                </td>
+            </tr>
+        </table>
+</form>
+</body>
+</html>
